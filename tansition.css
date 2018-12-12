@@ -1,0 +1,36 @@
+*{
+		border:2px solid yellow;
+		box-sizing: border-box;
+	}
+	body{
+		background-image: url(1.jpg);
+	}
+	    .container{
+	    	position: relative;
+            transform: 
+	    	width: 80%;
+	    	height: 600px;
+	    	background: black;
+	    	text-align: center;
+	    }
+		#div_1,#div_2{
+			position:relative;
+			width: 50%;
+			height: 400px;
+			background: red;
+			float: left;
+
+		}
+		#div_2{
+			background: orange;
+		}
+		#_21,#_22{
+			position: absolute;
+			width: 40%;
+	    	height: 300px;
+	    	background: blue;
+	    	float: left;
+		}
+		#_22{
+	    	background: green;
+		}

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Login to ChatZilla </title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="form_details">
+            <h1>WELCOME </h1><br>
+            <img src="images/logo.png"><br><br>
+            <p style="color:white;"><span>ChatZilla</span> provides the platform to connect to the people you love to talk to share.</p>
+
+        </div>
+
+        <div id="login">
+            <h1 style="color: #FF3D00 ;text-shadow: 2px 2px 0px #888">Login</h1>to your account
+            <br><br>
+            <hr><br><br>
+            <div>
+                <form action="includes/login.php" method="post">
+                    <div class="input">
+                        <input type="text" name="email" required autofocus>
+                        <label>Enter Your email</label><br>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" required>
+                        <label>Enter Your Password</label>
+                    </div><br>
+                    <p><a href="#" style="font-size: 15px;text-decoration: none;float: right; position: relative;top: -35px;">Forgot Password ??</a></p><br>
+                    <input type="submit" value="Login" name="login">
+                </form>
+            </div>
+            <p>OR</p>
+            <a href="signup.html" target="_blank"><input type="submit" value="Sign up" name="signup"></a>
+        </div>
+    </div>
+</body>
+
+</html>
