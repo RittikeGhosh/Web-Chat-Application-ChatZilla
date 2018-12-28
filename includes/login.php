@@ -1,11 +1,48 @@
 <?php
 include 'db.php';
+session_start();
 
-$name = $email = $gender = $comment = $website = "";
+$name = $email =$ePassword= "";
 
-if(isset($_POST['login'])){
-     $email = test_input($_POST['email']);
-     $ePassword = test_input($_POST['password']);
+if(isset($_POST['login']) && !empty($_POST['login'])){
+    $email = test_input(strtolower($_POST['email']));
+    $ePassword = md5(test_input($_POST['password']));
+    
+    $query="SELECT id,name,password FROM userdata WHERE email='$email';";
+    $DBquery=mysqli_query($conn,$query);
+    $row_num= mysqli_num_rows($DBquery);
+
+    if($row_num>0)
+    {
+        $rows=mysqli_fetch_assoc($DBquery);
+        if($rows['password']==$ePassword)
+        {
+            echo "<br>Ypu R SUCCESSFUlY LOGGED IN";
+
+            $log = 1;
+            $_SESSION['effd454fd545df5fdfd5flog'] = $log;
+            $_SESSION['f56f56f5d6f5user6f654fidf5f'] = $rows['id'];
+            $_SESSION['df5df56fduserdf4fdfg4namegb'] = $rows['name'];
+            
+            header("location: ../landpage.php");
+        }
+        else
+        {
+            $log = 4;
+            $_SESSION['effd454fd545df5fdfd5flog'] = $log;
+            header("location: ../index.php");
+        }
+    }
+    elseif($row_num == 0)
+    {
+            $log = 3;
+            $_SESSION['effd454fd545df5fdfd5flog'] = $log;
+          header("location: ../index.php");
+    }
+}
+
+else {
+     header("location: ../index.php");
 }
 
 function test_input($data) {
@@ -15,28 +52,6 @@ function test_input($data) {
   return $data;
 }
 
-echo $ePassword."<br>".$email;
-$query="SELECT password FROM userdata WHERE email='$email';";
-$DBquery=mysqli_query($conn,$query);
-$row_num= mysqli_num_rows($DBquery);
-echo "<br>".$row_num;
-if($row_num>0)
-{
-    $rows=mysqli_fetch_assoc($DBquery);
-    if($rows['password']==$ePassword)
-    {
-        echo "<br>Ypu R SUCCESSFU;Y LOGGED IN";
-    }
-    else
-    {
-        echo "<br>thw enterwef passwor is incorrect";
-         header("location: ../index.html");
-    }
-}
-else
-{
-   echo "<br>this email is npt registred with us"; 
-    header("location: ../index.html");
-}
+
 
 ?>

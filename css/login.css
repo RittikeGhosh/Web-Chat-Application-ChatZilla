@@ -1,14 +1,16 @@
 *{
     margin: 0px;
     padding: 0px;
-    
+    box-sizing: border-box;
+    font-family: 'Open Sans Condensed', sans-serif;
+
 }
 body{
-    background:#ecfff2;
+    background:rgb(122, 217, 104);
     
     color: black;
-    padding: 20px;
-    margin: 20px;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
 }
 .container{
@@ -21,6 +23,7 @@ body{
     box-shadow: 0px 0px 10px #4A148C;
     background-color:rgba(25, 118, 210,0.7);
     font-family: Bookman Old Style;
+    font-family: 'Open Sans Condensed', sans-serif;
     
 }
 .container #form_details img{
@@ -82,12 +85,13 @@ body{
     left: 5px;
     color: rgb(121, 114, 114);
     transition: .3s;
+    font-size: 20px;
 }
 #login .input input:focus~label,
 #login .input input:valid~label{
     top: -5px;
     color:dodgerblue;
-    font-size: 13px;
+    font-size: 16px;
 }
 .input{
     position: relative;
@@ -95,7 +99,7 @@ body{
     padding: 20px 0;
 }
 input[type=submit]{
-    background-color: #2196F3;
+    background-color: #6e757b;
     width: 30%;
     height: 40px;
     color: white;

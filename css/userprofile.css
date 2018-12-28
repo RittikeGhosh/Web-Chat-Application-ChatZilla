@@ -1,0 +1,125 @@
+*{
+			padding: 0px 0px;
+			margin: 0px 0px;
+			box-sizing: border-box;
+            font-family: 'Arimo', sans-serif;
+		}
+		/* styling for the upper nav */
+		 #nav{
+            background-color: rgba(122, 217, 104,0.8);
+            height: 3em;
+            width: 100%;
+            min-width: 800px;
+            padding: 4px 15px 4px 15px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
+        #nav #logo{
+            float: left;
+        }
+        #nav #links{
+            float: right;
+        }
+        #nav #links div span{
+            cursor: pointer;
+        }
+        #nav #links div{
+            float: left;
+            width: 100px;
+            text-align: center;
+        }
+        #nav #search-bar{
+            text-align: center;
+            margin: 0 auto;
+        }
+        #nav #search-bar input{
+            width: 20%;
+            height: 2.2em;
+            margin-top: 5px;
+            border:2px solid #009624;
+            border-radius: 20px;
+            font-size: 15px;
+            outline: none;
+            padding: 0px 10px 0px 10px;
+        }
+        /* styling for the side navs ................*/
+
+		#container{
+			width: 100%;
+			min-width:1000px;
+			height: 920px;
+		}
+		#container #list2{
+			width: 20%;
+			float: left;
+			height: 100%;
+			background-color:rgb(122, 217, 104);
+
+		}
+
+		/*styling for the body part .............. */
+		#container #outerBody{
+			width: 80%;
+			float: left;
+			min-height: 80%;
+		}
+		#container #outerBody #body{
+			width: 100%;
+			min-height: 100%;
+			/*margin: 0 auto;*/
+			background-color: white;
+			padding: 50px 50px 50px 100px;
+		}
+		#container #outerBody #body #userinfo{
+			width: 100%;
+			height: 300px;
+			/*background-color: yellow;*/
+		}
+		#container #outerBody #body #userinfo #userimg{
+			width: 300px;
+			height: 300px;
+			float: left;
+			overflow: hidden;
+			border-radius: 150px;
+			background-color: white;
+			text-align: center;
+			padding: 0px 0px;
+			border:2px solid rgba(122, 217, 104,1);
+		}
+		#container #outerBody #body #userinfo #userimg img{
+			width: 298px;
+			height: 298px;
+		}
+		#container #outerBody #body #userinfo #userdtls{
+			/*background-color: red;*/
+			padding: 50px 0px 0px 50px;
+			width: 52%;
+			height: 100%;
+			float: left;
+			overflow-wrap: break-word;
+			overflow-y: hidden;
+
+		}
+		#container #outerBody #body #edit button{
+            background-color: rgba(122, 217, 104,1);
+            height: 5em;
+            outline: none;
+            border-radius: 30px;
+            width: 200px;
+            border:0px solid blue;
+            float: right;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px #888;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+		}
+		#container #outerBody #body #edit button:hover{
+			background-color: rgba(122, 217, 104,0.8);
+		}
+		email{
+color: blue;
+		}

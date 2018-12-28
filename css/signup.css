@@ -2,143 +2,118 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 body{
-/*
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-*/
+
 }
 #container{
-    background-color: red;
-    width: 100%;
-    height: 100%;
-    position: relative;
+    width: 1900px;
+    height: 1000px;
 }
-
-#container #info{
-    width: 30%;
+#container #info {
     height: 100%;
-    background-color: #55f273;
+    width:20%;
+    background-color: rgb(122, 217, 104);
+    position: relative;
     float: left;
 }
 #container #info img{
-    width: 300px;
+    width: 400px;
     height: auto;
     position: absolute;
-    top: 40%;
-    left:22%;
+    top: 25%;
+    left:60%;
+    animation-name: anim;
+    animation-duration: 1.8s;
+    animation-timing-function: cubic-bezier(0.74, 1.38, 0.78, 1.93);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+    
 }
-#container #Form{
+#container #form{
+    float: left;
     width: 70%;
     height: 100%;
-    background-color: white;
-    float: left;
-    
-    
+    position: relative;
 }
-#container #Form #signup{
+#container #form #signup{
+    width: 500px;
+    height: 550px;
+    background-color: rgba(122, 217, 104,0.7);
     position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-150px,-250px);
-    box-shadow: -10px -10px 20px #eee;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: rgb(185, 247, 170);
-    width:750px;
-    height: 500px;
-    
+    top: 30%;
+    left: 40%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(122, 217, 104);
+    padding: 0 30px;
+    text-align: center;
+}
+#container #form #signup #logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+    top: -50px;
+    left: 170px;
+}
+#container #Form #signup .gender{
+    text-align: left;
+    padding: 0px 0px 25px 0px;
+    font-size: 20px;
+    position: relative;
+    top: -10px;
+}
+#container #Form #signup .gender input{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    border-bottom: 1.1px solid rgb(121, 114, 114);
+    font-size: 17px;
+    text-align: center;
 }
 #container #Form #signup .input{
     position: relative;
+    top: -25px;
     text-align: left;
     padding: 20px 0;
 }
 #container #Form #signup .input input{
     position: relative;
     outline: none;
-    width: 90%;
+    width: 99%;
     height: 30px;
     padding: 5px;
+    font-family: 'ZCOOL XiaoWei', serif;
     background-color: transparent;
     border: 0px;
     border-bottom: 1.1px solid rgb(121, 114, 114);
-    font-size: 17px;
+    font-size: 20px;
     color: rgba(0,0,0,0.8);
     z-index: 1;
 }
-#container #Form #signup #name input{
-    width: 45%;
-} 
+#container #Form #signup .input input[name=name],#container #Form #signup .input input[name=email]{
+    text-transform: uppercase;
+}
 #container #Form #signup .input input:focus{
     border-bottom: 2px solid  #2196F3 ;
 }
 #container #Form #signup .input label{
     position: absolute;
-    top: 25px;
+    top: 22px;
     left: 5px;
-    color: rgba(42, 35, 35,0.8);
+    font-size: 20px;
+/*    color: rgba(42, 35, 35,0.8);*/
     transition: 0.3s;
 }
 #container #Form #signup .input input:focus~label,
 #container #Form #signup .input input:valid~label{
     top: -5px;
     color:dodgerblue;
-    font-size: 13px;
-}
-input[type=submit]{
-    background-color: #2196F3;
-    width: 30%;
-    height: 40px;
-    color: white;
-    font-weight:bold; 
-    border-radius: 20px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-}
-input[type=submit]:hover{
-    background-color: #1565C0;
-    box-shadow: 2px 2px 10px #1565C0;
-}
-/*
-#container #Form #signup .input input{
-    position: relative;
-    outline: none;
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    background-color: transparent;
-    border: 0px;
-    border-bottom: 1.1px solid rgb(121, 114, 114);
     font-size: 17px;
-    text-align: left;
-    z-index: 1;
-    color: rgba(0,0,0,0.8);
-}
-#container #Form #signup .input input:focus{
-    border-bottom: 2px solid  #2196F3 ;
-}
-#container #Form #signup .input label{
-    position: absolute;
-    top: 25px;
-    left: 5px;
-    color: rgb(42, 35, 35);
-    transition: .3s;
-}
-#container #Form #signup .input input:focus~label,
-#container #Form #signup .input input:valid~label{
-    top: -5px;
-    color:dodgerblue;
-    font-size: 13px;
-}
-.input{
-    position: relative;
-    text-align: left;
-    padding: 20px 0;
 }
 input[type=submit]{
     background-color: #2196F3;
@@ -150,12 +125,20 @@ input[type=submit]{
     border: 0;
     outline: none;
     cursor: pointer;
+    position: relative;
 }
 input[type=submit]:hover{
     background-color: #1565C0;
     box-shadow: 2px 2px 10px #1565C0;
 }
-input[name=signup]{
-    background-color: #F44336;
+@keyframes anim{
+    0%{
+        transform: translate(0px,0px);
+    }
+    50%{
+        transform: translate(-20px,-20px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
 }
-*/

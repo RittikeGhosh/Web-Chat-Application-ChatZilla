@@ -1,0 +1,60 @@
+
+		*{
+			padding: 0px 0px;
+			margin: 0px 0px;
+			box-sizing: border-box;
+			font-family: 'Arimo', sans-serif;
+
+		}
+
+		/* styling for the side navs ................*/
+
+		#container{
+			width: 100%;
+			min-width:1000px;
+			height: 920px;
+		}
+		#container #list1{
+			width: 20%;
+			float: left;
+			height: 100%;
+			background-color:rgb(122, 217, 104);
+
+		}
+		#container #list2{
+			width: 20%;
+			float: left;
+			height: 100%;
+			background-color: rgb(122, 217, 104);
+		}
+
+		/*styling for main body .........................*/
+
+		#container #outerBody {
+			float: left;
+			width: 60%;
+			height: 100%;
+			overflow-y: scroll;
+		}
+		#container #outerBody #body{
+			width: 80%;
+			min-height: 100%;
+			margin: 0 auto;
+			background-color: #fafafa;
+			border-radius: 50px 0px;
+			padding: 50px 100px;
+		}
+		#container #outerBody #body #msgicon{
+			position: relative;
+			top: -50px;
+			left: 0px;
+			width: 150px;
+			background-color:rgba(122, 217, 104,0.8) ;
+			height: 2.5em;
+			text-align: center;
+			padding: 5px 0px;
+			border:2px dashed white;
+			color: white;
+			font-family: comic sans ms;
+			font-size: 20px;
+		}
