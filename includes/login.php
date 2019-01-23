@@ -17,12 +17,17 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
         $rows=mysqli_fetch_assoc($DBquery);
         if($rows['password']==$ePassword)
         {
-            echo "<br>Ypu R SUCCESSFUlY LOGGED IN";
+            //echo "<br>Ypu R SUCCESSFUlY LOGGED IN";
 
             $log = 1;
+            $id = $rows['id'];
+
             $_SESSION['effd454fd545df5fdfd5flog'] = $log;
-            $_SESSION['f56f56f5d6f5user6f654fidf5f'] = $rows['id'];
+            $_SESSION['f56f56f5d6f5user6f654fidf5f'] = $id;
             $_SESSION['df5df56fduserdf4fdfg4namegb'] = $rows['name'];
+
+            $statquery = "UPDATE userdata SET status=1 WHERE id=$id;";
+            $atatsql = mysqli_query($conn,$statquery);
             
             header("location: ../landpage.php");
         }
@@ -52,6 +57,5 @@ function test_input($data) {
   return $data;
 }
 
-
-
+mysqli_close($conn);
 ?>

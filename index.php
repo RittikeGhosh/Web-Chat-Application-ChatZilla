@@ -15,6 +15,8 @@ if($_SESSION['effd454fd545df5fdfd5flog'] != 1 )
 echo "<html>
 <head>
     <title>Login to ChatZilla </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='shortcut icon' type='image/png' href='images/favicon.png'>
     <link rel='stylesheet' href='css/login.css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei' rel='stylesheet'>
@@ -58,7 +60,7 @@ echo "<html>
         <div id='form_details'>
             <h1>WELCOME </h1><br>
             <img src='images/logo.png'><br><br>
-            <p style='color:white;'><span>ChatZilla</span> provides the platform to connect to the people you love to talk to share.</p>
+            <p style='color:white;'><span>ChatZilla</span><br><br>********Love to chat*********</p>
 
         </div>
 
@@ -76,7 +78,7 @@ echo "<html>
                         <input type='password' name='password' required>
                         <label>Enter Your Password</label>
                     </div><br>
-                    <p><a href='#' style='font-size: 15px;text-decoration: none;float: right; position: relative;top: -35px;'>Forgot Password ??</a></p><br>
+                    <p><a href='forgetpass.php' style='font-size: 15px;text-decoration: none;float: right; position: relative;top: -35px;'>Forgot Password ??</a></p><br>
                     <input type='submit' value='Login' name='login'>
                 </form>
             </div>

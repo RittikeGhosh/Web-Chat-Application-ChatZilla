@@ -1,44 +1,64 @@
 <?php
-$target_dir = "../uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
+
+session_start();
+$id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
+
+if (isset($_POST['upload'])) {
+    # code...
+    $file = $_FILES['profileimg'];
+    //print_r($files);
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    $fileType = $file['type'];
+
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+
+    $fileDest = "images/uploads/";
+
+    $allowed = array('jpg','jpeg','png');
+if($fileName != '')
+    {
+         if (in_array($fileActualExt, $allowed)) {
+            # code...
+            if ($fileError === 0) {
+                # code...
+                if ($fileSize < 10000000) {
+                    # code...
+                    $fileNewName = $id . "." .$fileActualExt;
+                    $fileDest = $fileDest . $fileNewName;
+                    //echo $fileDest;
+                    move_uploaded_file($fileTmpName, "../" . $fileDest);
+
+                    include_once 'db.php';
+
+                    $query = "UPDATE userdata SET profileimg = '$fileDest' WHERE id = $id;";
+                    $sql = mysqli_query($conn,$query);
+
+                   // header("location: ../infoedit.php?status=success");
+
+                    echo "<script>history.back();</script>";
+                }
+                else
+                {
+                    echo "<script>alert('the size of image if more than 10mb');history.back();</script>";
+                }
+            }
+            else{
+                echo "<script>alert('error uploading file');history.back();</script>";
+            }
+
+    }
+    else{
+        echo "<script>alert('this file type is not supported');history.back();</script>";
     }
 }
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
+else
+{
+    echo "<script>alert('empty selection');history.back();</script>";
 }
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
+   
 }
 ?>

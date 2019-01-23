@@ -14,10 +14,14 @@ if($_SESSION['effd454fd545df5fdfd5flog'] == 1 )
  echo "<html>
 <head>
 	<title>ChatZilla</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='shortcut icon' type='image/png' href='images/favicon.png'>
 	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.1/css/all.css' integrity='sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP' crossorigin='anonymous'>
 	<link rel='stylesheet' type='text/css' href='css/landpage.css'>
 	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script type='text/javascript' src = 'js/landpage.js'></script>
+	<style type='text/css' href = 'css/pplList.css'></style>
 
 </head>
 <body>
@@ -35,14 +39,13 @@ if($_SESSION['effd454fd545df5fdfd5flog'] == 1 )
 		<div id='outerBody'>
 			<div id='body'>
 			<div id='msgicon'>MESSAGES</div>
-			
+			<div id = 'new'>
+			</div>
 				
 		    </div>
 	    </div>";
 		     include 'includes/frndList2.php';
-		     echo "
-</body>
-</html>";
+		     echo "</body></html>";
 
 }
 elseif($_SESSION['effd454fd545df5fdfd5flog'] != 1){

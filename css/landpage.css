@@ -58,3 +58,55 @@
 			font-family: comic sans ms;
 			font-size: 20px;
 		}
+		#container #outerBody #body #new a{
+
+			text-decoration: none;
+		}
+		#container #outerBody #body #new .frndrqst{
+			width: 100%;
+			background-color: #e57373;
+			padding: 20px 10px;
+			text-align: left;
+			border-radius: 10px;
+			color: white;
+			height: 50px;
+			overflow: hidden;
+			transition: 1s;
+			word-wrap: break-word;
+		}
+		
+		#container #outerBody #body #new .frndrqst:hover{
+			background-color: #f44336;
+			padding: 20px 10px;
+			height: auto;
+			
+	    }
+	    #container #outerBody #body #new .frndrqst span{
+	    	color: black;
+	    	font-weight: bold;
+	    	/*word-spacing: 3px;*/
+	    	letter-spacing: 2px;
+	    }
+		#container #outerBody #body #new .newmsg{
+			width: 100%;
+			background-color: #e1bee7;
+			padding: 20px 10px;
+			text-align: left;
+			border-radius: 10px;
+			color: white;
+			height: 50px;
+			overflow: hidden;
+			transition: 2s;
+		}
+		
+		#container #outerBody #body #new .newmsg:hover{
+			background-color: #ba68c8;
+			padding: 20px 10px;
+			height: auto;
+			
+	    }
+	    #container #outerBody #body #new .newmsg span{
+	    	text-decoration:underline;
+	    	color: black;
+	    }
+		

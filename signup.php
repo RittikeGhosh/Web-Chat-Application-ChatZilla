@@ -15,6 +15,8 @@ echo "
 <html>
 <head>
     <title>Signup for ChatZilla</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='shortcut icon' type='image/png' href='images/favicon.png'>
     <link rel='stylesheet' href='css/signup.css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei' rel='stylesheet'>
@@ -23,15 +25,22 @@ echo "
 	src='https://code.jquery.com/jquery-3.3.1.min.js'
     integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
     crossorigin='anonymous'></script>
+    <script src='js/otp.js'></script>
     <script>
            $(document).ready(function(){
-               var log = 0;
-               log = "; $log = $_SESSION['effd454fd545df5fdfd5flog'];echo $log;$log = 9 ;$_SESSION['effd454fd545df5fdfd5flog'] = $log;
+               var log;
+               log = ";
+                echo $_SESSION['effd454fd545df5fdfd5flog'];$log = 9 ;
+               $_SESSION['effd454fd545df5fdfd5flog'] = $log;
 
     echo ";
            if(log==3)
            {
                alert('This email is incorrect or is already registered with us  OR    TRY DIFFERENT EMAIL OR LOGIN INSTEAD ');
+           }
+           if(log==7)
+           {
+               alert('OTP did not match .Try resending.');
            }
            });
 
@@ -72,14 +81,21 @@ echo "
                         <input type='date' name='dob' required>
                     </div>
                     <div class='input'>
-                        <input type='text' name='email' required>
+                        <input type='text' name='email' id= 'email' required>
                         <label>Enter Your Email</label><br>
                     </div>
+                    <div id='sendotp'>
+                        <label> &nbsp; Click to verify email &nbsp; &nbsp; &nbsp;</label>
+                    </div>
+                    <div id='otp'>
+                        <label> &nbsp; Enter The OTP :&nbsp; &nbsp; &nbsp;</label>
+                        <input type='text' name = 'otp' required> &nbsp; <label><sup>*</sub></label>
+                    </div><br>
                     <div class='input'>
                         <input type='password' name='password' required>
                         <label>Enter Your Password</label>
                     </div><br>
-                    <input type='submit' value='Sign Up' name='signup'>
+                    <input id ='sub' type='submit' value='Sign Up' name='signup'>
                 </form>
             </div>
         </div>

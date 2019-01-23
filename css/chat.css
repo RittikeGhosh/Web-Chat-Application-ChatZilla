@@ -54,9 +54,8 @@
 		}
 		#container #body #box #chatBox{
 			width: 100%;
-			height: 80%;
+			height: 87%;
 			background-color: white;
-			padding: 20px;
 			overflow-y: scroll;
 			/*border-left:2px solid #eee;
 			border-right: 2px solid blue;*/
@@ -64,6 +63,7 @@
 		#container #body #box #chatBox #innerChatBox {
 			float: left;
 			width: 100%;
+			padding: 20px 20px;
 			/*background-color: red;*/
 		}
 		#container #body #box #chatBox #innerChatBox .outerme{
@@ -71,7 +71,7 @@
 			float: right;
 		}
 		#container #body #box #chatBox #innerChatBox .outerme .me{
-			background-color: #e0f7fa;
+			background-color: #a5d6a7;
 			float: right;
 			width: auto;
 			overflow-wrap: break-word;
@@ -81,7 +81,22 @@
 			border-radius: 20px;
 			line-height: 20px;
 		}
-		#container #body #box #chatBox #loadmsg{
+		#container #body #box #chatBox #innerChatBox .outerfrnd{
+			width: 100%;
+			float: left;
+		}
+		#container #body #box #chatBox #innerChatBox .outerfrnd .frnd{
+			background-color: #e0f7fa;
+			float: left;
+			width: auto;
+			overflow-wrap: break-word;
+			max-width: 80%;
+			height: auto;
+			padding: 10px;
+			border-radius: 20px;
+			line-height: 20px;
+		}
+		#container #body #box #chatBox #innerChatBox #info{
 			text-align: center;
 			color: rgba(0,0,0,0.5);
 			cursor: pointer;
@@ -90,13 +105,11 @@
 			width: 100%;
 			height: 4em;
 			padding-left: 20px;
-			padding-top: 25px;
+			padding-top: 15px;
 		}
 		#container #body #box #msgBox #textBox{
-			width: 70%;
-			min-height: 3em;
-			max-height: 6em;
-			height: auto;
+			width: 75%;
+			height: 3em;
 			border-radius: 4em;
 			border:1px solid #2e7d32;
 			padding-left:15px; 
@@ -106,9 +119,8 @@
 		}
 		#container #body #box #msgBox #textBox #txt{
 			width: 96%;
-			min-height: 3em;
-			max-height: 6em;
 			background-color: transparent;
+			font-size: 13px;
 			border: 0px;
 			outline:thin;
 			resize: none;
