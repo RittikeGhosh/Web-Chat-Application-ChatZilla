@@ -38,7 +38,7 @@ if($_SESSION['effd454fd545df5fdfd5flog'] == 1 )
 	echo "
 		<div id='outerBody'>
 			<div id='body'>
-			<div id='msgicon'>MESSAGES</div>
+			<div id='msgicon'>Notifications</div>
 			<div id = 'new'>
 			</div>
 				

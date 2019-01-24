@@ -1,7 +1,7 @@
 	// freiind list
 
 		$(function(){
-			setInterval(frndList,2000);
+			setInterval(frndList,5000);
 			$('#frndList').load('includes/frndList.php',{call : 'frndList'});
 
 		    function frndList(){

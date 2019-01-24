@@ -77,10 +77,22 @@ if($log == 1)
                          $.post('includes/frndlistupdate.php' , { status :status "; echo ",fid : "; echo $fid; echo " },
                            function(data)
                             { 
-                              $('#frnd').text(data);window.location.reload();
+                              $('#frnd').text(data);
+                              window.location.reload();
                             });
                     }
                    });
+                   $('#delrqst').click(function(){
+                     var r=confirm('Do you want to delete Request ?');
+                      if(r == true)
+                      {
+                        $.post('includes/frndlistupdate.php' , { status : 4,"; echo "fid : "; echo $fid; echo " },
+                           function(data,status)
+                            { 
+                              window.location.reload();
+                            });
+                      }
+                    });
 
                 });
             </script>

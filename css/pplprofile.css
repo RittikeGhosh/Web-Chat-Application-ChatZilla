@@ -64,7 +64,7 @@
 
 		}
 		#container #outerBody #body #edit #friend button{
-            background-color: rgba(122, 217, 104,1);
+            background-color: #42a5f5;
             height: 5em;
             outline: none;
             border-radius: 30px;
@@ -79,7 +79,8 @@
 
 		}
 		#container #outerBody #body #edit #friend button:hover{
-			background-color: rgba(122, 217, 104,0.8);
+			background-color: #1976d2;
+			box-shadow: 5px 5px 10px #eee;
 		}
 		#container #outerBody #body #edit #message button{
             background-color: rgba(122, 217, 104,1);
@@ -98,6 +99,26 @@
 		}
 		#container #outerBody #body #edit #message button:hover{
 			background-color: rgba(122, 217, 104,0.8);
+			box-shadow: 5px 5px 10px #eee;
+		}
+		#container #outerBody #body #edit #delreq button{
+            background-color: #ef5350;
+            height: 5em;
+            outline: none;
+            border-radius: 30px;
+            width: 200px;
+            border:0px solid blue;
+            float: right;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px #888;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+		}
+		#container #outerBody #body #edit #delreq button:hover{
+			background-color: #c62828;
+			box-shadow: 5px 5px 10px #eee;
 		}
 		email{
 color: blue;

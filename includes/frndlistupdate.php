@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -13,7 +12,7 @@ $log = $_SESSION['effd454fd545df5fdfd5flog'] ;
 
 if($log == 1)
 {
-if(isset($_POST['status']) && isset($_POST['fid']) && !empty($_POST['fid']) && $_POST['status']< 4)
+if(isset($_POST['status']) && isset($_POST['fid']) && !empty($_POST['fid']) && $_POST['status']< 5)
 {
 
 
@@ -46,7 +45,7 @@ if(isset($_POST['status']) && isset($_POST['fid']) && !empty($_POST['fid']) && $
 
 		echo "Request Sent";
     }
-    elseif ($frndstatus == 1) 
+    elseif ($frndstatus == 1 || $frndstatus == 4) 
     {
     	//for the user table ........
 

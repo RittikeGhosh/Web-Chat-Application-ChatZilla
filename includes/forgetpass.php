@@ -20,7 +20,7 @@ if(!empty($_POST['email']) && !empty($_POST['otp']) && !empty($_POST['password']
 
 			if(mysqli_num_rows($sql) == 1)
 			{
-				$pass= md5(password);
+				$pass= md5($password);
 
 				$uquery = "UPDATE userdata SET password ='$pass' WHERE email = '$email';";
 				$sql = mysqli_query($conn,$uquery);

@@ -15,9 +15,10 @@
 			width: 100%;
 			height: 4em;
 			border-radius: 20px;
-			padding: 8px 20px 0px 50px;
+			padding: 8px 20px 0px 40px;
 			overflow:hidden;
 			overflow-wrap: break-word;
+			position: relative;
 		}
 	#container #list2 #frndList .outerfrnd a .frnds span{
 		position: relative;
@@ -31,10 +32,28 @@
 		float: left;
 		background-color: white;
 		border-radius: 1.5em;
-		margin: 0px 10px 0px 0px;
-		overflow: hidden;
+		margin: 0px 10px 0px 0px;/*
+		overflow: hidden;*/
+		position: relative;
 	}
 	#container #list2 #frndList .outerfrnd a .frnds .dp img{
 		width: 3em;
 		height: 3em;
+		border-radius: 1.5em;
+	}
+	.msgcount{
+        background-color :#1e88e5;
+        padding: 5px 5px 2px 5px;
+        border-radius:7.5px; 
+        width:auto;
+        height:25px; 
+        float: right;
+        position: absolute;
+        top: -2px;
+        right: 20px;
+        text-align: center;
+        color: white;
+        /*position:relative; 
+        left:90%;
+        top:-5px;*/
 	}

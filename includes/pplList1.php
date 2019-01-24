@@ -1,13 +1,9 @@
        <script type='text/javascript'>
-		
-		 // people list
-
-		$(function(){
+       	$(function(){
 				$('#pplList').load('includes/pplList.php'); 
-
 		});
-
-	</script>
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/pplList.css">
 
 
        <div id='list1'>
