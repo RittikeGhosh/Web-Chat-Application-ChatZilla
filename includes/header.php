@@ -33,9 +33,9 @@
         }
     </style>
 <ul>
-    <a href="head.php">
+   <!--  <a href="head.php">
         <li class="links">ABOUT</li>
-    </a>
+    </a> -->
     <a href="index.php">
         <li class="links">LOGIN</li>
     </a>
