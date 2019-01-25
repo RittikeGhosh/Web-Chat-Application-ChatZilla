@@ -11,7 +11,15 @@ if(empty($_SESSION['effd454fd545df5fdfd5flog']))
 if($_SESSION['effd454fd545df5fdfd5flog'] == 1)
 {
 
-$id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
+	$id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
+
+	date_default_timezone_set("Asia/Kolkata");
+
+	include_once 'includes/db.php';
+	$date = date("Y-m-d H:i:s");
+	$query = "UPDATE userdata SET logdate = '$date',status = 1 WHERE id = $id; ";
+	$sql = mysqli_query($conn,$query);
+
 
 	echo "
 	<!DOCTYPE html>
@@ -34,7 +42,7 @@ $id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
 				<div id='image'>
 					<form method='post' action='includes/upload.php' enctype='multipart/form-data'>
 						<div id='profileimg'>";
-						include_once 'includes/db.php';
+						//include_once 'includes/db.php';
 
 	                $query = "SELECT profileimg,name,address FROM userdata WHERE id = $id;";
 	                $sql = mysqli_query($conn,$query);

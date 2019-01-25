@@ -26,8 +26,9 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
             $_SESSION['f56f56f5d6f5user6f654fidf5f'] = $id;
             $_SESSION['df5df56fduserdf4fdfg4namegb'] = $rows['name'];
 
-            $statquery = "UPDATE userdata SET status=1 WHERE id=$id;";
-            $atatsql = mysqli_query($conn,$statquery);
+            $date = date("Y-m-d H:i:s");
+            $statquery = "UPDATE userdata SET logdate = '$date',status = 1 WHERE id = $id; ";
+            $statsql = mysqli_query($conn,$query);
             
             header("location: ../landpage.php");
         }

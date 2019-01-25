@@ -15,13 +15,21 @@ $log = $_SESSION['effd454fd545df5fdfd5flog'] ;
 if($log == 1)
 {
 
+    $id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
+
+    date_default_timezone_set("Asia/Kolkata");
+
     include_once 'includes/db.php';
+    $date = date("Y-m-d H:i:s");
+    $query = "UPDATE userdata SET logdate = '$date',status = 1 WHERE id = $id; ";
+    $sql = mysqli_query($conn,$query);
+
 
     if(isset($_GET['id']) && !empty($_GET['id']))
     {
     	$fid = $_GET['id'];
 
-        $id =$_SESSION['f56f56f5d6f5user6f654fidf5f'];      //user id ..........
+        //$id =$_SESSION['f56f56f5d6f5user6f654fidf5f'];      //user id ..........
 
         if($fid != $id)
         {

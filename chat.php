@@ -18,7 +18,15 @@ if($_SESSION['effd454fd545df5fdfd5flog'] == 1 )
 	    {
 	    	$fid = test_input($_GET['id']);
 
-	    	include_once 'includes/db.php';
+	    	$id = $_SESSION['f56f56f5d6f5user6f654fidf5f'];
+
+			date_default_timezone_set("Asia/Kolkata");
+
+			include_once 'includes/db.php';
+			$date = date("Y-m-d H:i:s");
+			$query = "UPDATE userdata SET logdate = '$date',status = 1 WHERE id = $id; ";
+			$sql = mysqli_query($conn,$query);
+
 
             $usertablename = $id . "_frndlist";
 	    	//echo $usertablename;
