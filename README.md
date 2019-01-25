@@ -1,5 +1,7 @@
 # webchatapplication
 
+ChatZilla provide the platform to chat with the friends and beloved ones.
+
 1 > Before running the webpage make a database named 'chatzilla' .
 
 2 > In this database make a table named 'userdata' having structure as :-
