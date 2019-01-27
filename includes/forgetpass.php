@@ -32,6 +32,10 @@ if(!empty($_POST['email']) && !empty($_POST['otp']) && !empty($_POST['password']
 				header("location:../forgetpass.php");
 			}
 		}
+		else
+		{
+			header("location:../forgetpass.php");
+		}
 	}
 	else
 	{

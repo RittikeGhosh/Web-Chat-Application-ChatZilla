@@ -2,17 +2,17 @@
 
 include_once 'db.php';
 
-$query = "SELECT id,status FROM `userdata` WHERE status=1 AND TIMESTAMPDIFF(MINUTE, logdate, NOW()) > 20;";
+$query = "SELECT id FROM `userdata` WHERE status=1 AND TIMESTAMPDIFF(SECOND, logdate, NOW()) > 20;";
 $sql = mysqli_query($conn,$query);
 
 if (mysqli_num_rows($sql)>0) {
-	echo mysqli_num_rows($sql);
-	while($row = mysqli_fetch_assoc($sql))
+	//echo mysqli_num_rows($sql);
+	while($data=mysqli_fetch_assoc($sql))
 	{
-		$id = $row['id'];
+		$id = $data['id'];
 
 		$uquery = "UPDATE `userdata` SET status = 0 WHERE id = $id;";
-		$sql = mysqli_query($conn,$uquery);
+		$usql = mysqli_query($conn,$uquery);
 	}
 
 }
