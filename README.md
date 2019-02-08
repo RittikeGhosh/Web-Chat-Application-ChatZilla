@@ -2,9 +2,7 @@
 
 
 ********************************************************************************************************
-**********Please note that currently this webpage is perfect for the pc. as it does not have responsive pages*********
-************it works and appear perfect for the pc************************************************
-********************************************************************************************************
+**********Please note that for more focus ont he database part ...currently this project is perfectly made for the pc,but not in phone as it does not has responsive pages......************************
 
 ChatZilla provide the platform to chat with the friends and beloved ones.
 
