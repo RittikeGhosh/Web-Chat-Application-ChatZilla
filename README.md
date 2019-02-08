@@ -1,5 +1,11 @@
 # webchatapplication
 
+
+********************************************************************************************************
+**********Please note that currently this webpage is perfect for the pc. as it does not have responsive pages*********
+************it works and appear perfect for the pc************************************************
+********************************************************************************************************
+
 ChatZilla provide the platform to chat with the friends and beloved ones.
 
 1 > Before running the webpage make a database named 'chatzilla' .
@@ -22,7 +28,6 @@ ChatZilla provide the platform to chat with the friends and beloved ones.
 	
 make sure to run the file named index.php inside includes at an interval of about 20min to keep the user log status updated .
 Or you can perform the cron job for that.
-
 
 
 
