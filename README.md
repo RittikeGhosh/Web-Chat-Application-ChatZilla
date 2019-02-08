@@ -1,9 +1,5 @@
 # webchatapplication
 
-
-********************************************************************************************************
-**********Please note that for more focus ont he database part ...currently this project is perfectly made for the pc,but not in phone as it does not has responsive pages......************************
-
 ChatZilla provide the platform to chat with the friends and beloved ones.
 
 1 > Before running the webpage make a database named 'chatzilla' .
@@ -28,6 +24,8 @@ make sure to run the file named index.php inside includes at an interval of abou
 Or you can perform the cron job for that.
 
 
+
+**********Please note that for more focus ont the database part currently this project is perfectly made for the PC ***************
 
 
 
