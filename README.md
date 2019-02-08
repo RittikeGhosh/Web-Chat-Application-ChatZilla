@@ -19,6 +19,10 @@ ChatZilla provide the platform to chat with the friends and beloved ones.
 	 9	logdate		datetime					No	CURRENT_TIMESTAMP		
 	10	address		varchar(200)	latin1_swedish_ci		Yes	NULL		
 	11	profileimg	varchar(50)	latin1_swedish_ci		No	None		
+	
+make sure to run the file named index.php inside includes at an interval of about 20min to keep the user log status updated .
+Or you can perform the cron job for that.
+
 
 
 
